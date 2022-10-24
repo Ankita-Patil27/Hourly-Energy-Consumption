@@ -10,15 +10,6 @@ st.title("Welcome to Energy Consumption Project")
 st.sidebar.header('User Input Parameters')
 
 no_days = st.sidebar.number_input("Insert Number of days", min_value=1, max_value=365, step=1)
-#days = {'Days': no_days}
-#features = pd.DataFrame(days, index=[0])
-
-
-
-#df = user_input_features()
-#st.subheader('User Input parameters')
-#st.write(features)
-
 
 with open("Linear_Regression_Final_Model.pkl", mode="rb") as f:
     model = pickle.load(f)
