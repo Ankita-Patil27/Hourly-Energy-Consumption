@@ -33,14 +33,3 @@ Predict=pd.date_range(ct,ct_1, freq='D')
 future_df = pd.DataFrame(index=Predict)
 future_df['future_energy'] = future_pred_lr.tolist()
 st.write(future_df)
-
-
-
-
-
-
-
-#st.write("Model loaded")
-#result = model.predict(df)
-#st.subheader('Predicted Result')
-#st.write(result)
