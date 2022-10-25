@@ -40,7 +40,6 @@ with tab1:
     st.write(future_df)
 with tab2:
     plt.figure(figsize=(14,5))
-    plt.title("Power consumption forecasting by LR", fontsize=25)
     plt.plot(future_df.index,future_df.values, label='Forecast', color="orange")
     plt.legend(fontsize=12, fancybox=True, shadow=True, frameon=True)
     plt.ylabel('Power consumption', fontsize=15)
