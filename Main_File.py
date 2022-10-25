@@ -27,9 +27,10 @@ for i in range(0,no_days):
     i=+1
 future_pred_lr=z[-no_days:]
 
-ct = datetime.datetime.now() + datetime.timedelta(days=1)
-ct_1 = datetime.datetime.now() + datetime.timedelta(days=no_days)
-Predict=pd.date_range(ct,ct_1, freq='D')
+#ct = datetime.datetime.now() + datetime.timedelta(days=1)
+#ct_1 = datetime.datetime.now() + datetime.timedelta(days=no_days)
+#Predict=pd.date_range(ct,ct_1, freq='D')
+Predict = pd.date_range(start='4/8/2018',periods=no_days,tz=None,freq = 'D')
 future_df = pd.DataFrame(index=Predict)
 future_df['Forecast'] = future_pred_lr.tolist()
 st.write(future_df)
