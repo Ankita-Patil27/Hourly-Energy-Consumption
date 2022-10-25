@@ -39,7 +39,7 @@ with tab2:
     plt.figure(figsize=(14,5))
     ax.plot(future_df.index,future_df.values, label='Forecast', color="orange")
     plt.legend(fontsize=12, fancybox=True, shadow=True, frameon=True)
-    plt.xticks(rotation=90)
+    plt.xticks(rotation=45)
     plt.ylabel('Power consumption', fontsize=15)
     plt.xlabel('Date', fontsize=15)
     st.pyplot(fig)
