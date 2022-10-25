@@ -27,7 +27,8 @@ for i in range(0,no_days):
     i=+1
 future_pred_lr=z[-no_days:]
 
-tab1, tab2 = st.tabs(["📈 Predicted Data","⛅ Predicted Data"])
+tab1, tab2 = st.tabs(["📈 Predicted Data","⛅ Graph"])
+
 with tab1:
     Predict = pd.date_range(start='4/8/2018',periods=no_days,tz=None,freq = 'D')
     future_df = pd.DataFrame(index=Predict)
@@ -43,4 +44,3 @@ with tab2:
     plt.ylabel('Power consumption', fontsize=15)
     plt.xlabel('Date', fontsize=15)
     st.pyplot(fig)
-    
