@@ -40,8 +40,12 @@ with tab1:
     future_df['Forecast'] = future_pred_lr.tolist()
     st.write(future_df)
     
-#with tab2:
-  #  plt.figure(figsize=(14,5))
+with tab2:
+    Predict = pd.date_range(start='4/8/2018',periods=no_days,tz=None,freq = 'D')
+    future_df = pd.DataFrame(index=Predict)
+    future_df['Forecast'] = future_pred_lr.tolist()
+    st.write(future_df)
+  #plt.figure(figsize=(14,5))
    # plt.plot(future_df.index,future_df.values, label='Forecast', color="orange")
    # plt.legend(fontsize=12, fancybox=True, shadow=True, frameon=True)
     #plt.ylabel('Power consumption', fontsize=15)
