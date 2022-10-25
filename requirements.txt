@@ -2,4 +2,4 @@ pandas
 numpy
 streamlit 
 sklearn
-matplotlib.pyplot
+matplotlib
