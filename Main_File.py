@@ -7,7 +7,6 @@ from matplotlib import pyplot as plt
 
 st.title("Welcome to Energy Consumption Project")
 
-
 st.sidebar.header('User Input Parameters')
 
 no_days = st.sidebar.number_input("Insert Number of days", min_value=1, max_value=4000, step=1)
@@ -28,11 +27,6 @@ for i in range(0,no_days):
     i=+1
 future_pred_lr=z[-no_days:]
 
-#ct = datetime.datetime.now() + datetime.timedelta(days=1)
-#ct_1 = datetime.datetime.now() + datetime.timedelta(days=no_days)
-#Predict=pd.date_range(ct,ct_1, freq='D')
-
-
 tab1, tab2 = st.tabs(["📈 Predicted Data","⛅ Predicted Data"])
 with tab1:
     Predict = pd.date_range(start='4/8/2018',periods=no_days,tz=None,freq = 'D')
@@ -45,6 +39,8 @@ with tab2:
     plt.figure(figsize=(14,5))
     ax.plot(future_df.index,future_df.values, label='Forecast', color="orange")
     plt.legend(fontsize=12, fancybox=True, shadow=True, frameon=True)
+    plt.xticks(rotation=90)
     plt.ylabel('Power consumption', fontsize=15)
+    plt.xlabel('Date', fontsize=15)
     st.pyplot(fig)
     
