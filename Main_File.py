@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import pickle
 import datetime
-import matplotlib.pyplot as plt
+
 
 st.title("Welcome to Energy Consumption Project")
 
