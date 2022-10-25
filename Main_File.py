@@ -31,14 +31,14 @@ future_pred_lr=z[-no_days:]
 #ct = datetime.datetime.now() + datetime.timedelta(days=1)
 #ct_1 = datetime.datetime.now() + datetime.timedelta(days=no_days)
 #Predict=pd.date_range(ct,ct_1, freq='D')
-
-tab1, tab2 = st.tabs(["📈 Predicted Data","⛅ Predicted Data"])
-with tab1:
-    Predict = pd.date_range(start='4/8/2018',periods=no_days,tz=None,freq = 'D')
-    future_df = pd.DataFrame(index=Predict)
-    future_df['Forecast'] = future_pred_lr.tolist()
-    st.write(future_df)
-with tab2:
+Predict = pd.date_range(start='4/8/2018',periods=no_days,tz=None,freq = 'D')
+future_df = pd.DataFrame(index=Predict)
+future_df['Forecast'] = future_pred_lr.tolist()
+st.write(future_df)
+#tab1, tab2 = st.tabs(["📈 Predicted Data","⛅ Predicted Data"])
+#with tab1:
+    
+#with tab2:
   #  plt.figure(figsize=(14,5))
    # plt.plot(future_df.index,future_df.values, label='Forecast', color="orange")
    # plt.legend(fontsize=12, fancybox=True, shadow=True, frameon=True)
